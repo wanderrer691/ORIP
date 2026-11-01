@@ -1,0 +1,12 @@
+venv/
+.git/
+.gitignore
+.dvc/
+.dvcignore
+data/
+client_test.py
+mlflow.db
+mlflow_artifacts/
+__pycache__/
+*.pyc
+.DS_Store
