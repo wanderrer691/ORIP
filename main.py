@@ -177,5 +177,5 @@ def predict(data: WineRequestData):
     return {
         "predicted_class": predicted_class,
         "probabilities": probabilities,
-        "model_status": "wine_quality_onnx_v1.0"
+        "model_status": "wine_quality_onnx_v1.1_updated"
     }

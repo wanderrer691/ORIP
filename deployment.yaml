@@ -1,0 +1,33 @@
+
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: wine-quality-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: wine-quality-service
+
+  template:
+    metadata:
+      labels:
+        app: wine-quality-service
+
+    spec:
+      containers:
+        - name: wine-quality-api-container
+          image: wanderrer691/wine_quality_api_service:ТЕГ_КОММИТА
+          ports:
+            - containerPort: 8000
+
+          resources:
+            limits:
+              cpu: "1.0"
+              memory: "512Mi"
+            requests:
+              cpu: "500m"
+              memory: "256Mi"
